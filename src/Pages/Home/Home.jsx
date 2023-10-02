@@ -1,8 +1,27 @@
+import Header from "../Shared/Header/Header";
+import Navbar from "../Shared/Header/Navbar/Navbar";
+import LeftSideNav from "../Shared/LeftSideNav/LeftSideNav";
+import RightSideNav from "../Shared/RightSideNav/RightSideNav";
+import Banner from "./Bannner";
+
 
 const Home = () => {
     return (
-        <div>
-            <h2 className="text-5xl font-poppins"> Home</h2>
+        <div className="max-w-6xl mx-auto">
+            <Header></Header>
+            <Banner></Banner>
+            <Navbar></Navbar>
+            <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-6">
+                <div>
+                    <LeftSideNav></LeftSideNav>
+                </div>
+                <div className="col-span-2 border">
+                    Coming soon
+                </div>
+                <div>
+                    <RightSideNav></RightSideNav>
+                </div>
+            </div>
         </div>
     );
 };
